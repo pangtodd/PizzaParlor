@@ -29,13 +29,15 @@ A website that allows customers to order a custom pizza.
 
 #### Describe: pizza()
 
-- Test: "create a contructor for pizza objects"
+- Test: 'create a contructor for "pizza" objects'
 - Code: let testPizza =new Pizza("large", "pepperoni", 12);
 - Expected Output: testPizza; {"large", "pepperoni, 12}
 ---
-- Test: ""
-- Code: 
-- Expected Output:
+
+#### Describe: order()
+- Test: "create a contructor for 'order' objects"
+- Code: let testOrder = new Order ();
+- Expected Output: testOrder; {}
 ---
 
 ## Known Bugs

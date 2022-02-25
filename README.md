@@ -14,7 +14,7 @@ A website that allows customers to order a custom pizza.
 * markdown
 
 ## Description:
- Website that essentially allows a customer to order a pizza. The site takes user input and creates a pizza order (via objects), keeping track of what their order is.
+ Website that  allows a customer to order a pizza. The site takes user input and creates a pizza order (via objects), keeping track of their order.
 
 
 ## Setup/Installation Requirements
@@ -27,17 +27,23 @@ A website that allows customers to order a custom pizza.
 
 ## Tests:
 
-#### Describe: pizza()
+#### Describe: Pizza()
 
 - Test: 'create a contructor for "pizza" objects'
 - Code: let testPizza =new Pizza("large", "pepperoni", 12);
 - Expected Output: testPizza; {"large", "pepperoni, 12}
 ---
 
-#### Describe: order()
+#### Describe: Order()
 - Test: "create a contructor for 'order' objects"
 - Code: let testOrder = new Order ();
 - Expected Output: testOrder; {}
+---
+
+#### Describe: order.addPizza()
+- Test: "create a prototype for Order that adds pizzas to an order object"
+- Code: testOrder.addPizza(testPizza);
+- Expected Output: testOrder; {pizzas: {testPizza}}
 ---
 
 ## Known Bugs

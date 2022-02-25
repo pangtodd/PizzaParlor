@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+  <link href="css/styles.css" rel="stylesheet" type="text/css">
+  <script src="js/jquery-3.6.0.js"></script>
+  <script src="js/scripts.js"></script>
+  <title>Mario's Hideout</title>
+</head>
+<body>
+  <div class = "container">
+    <h1>Mario's Hideout</h1>
+    <h4>voted best pizza from a plumbing pipe for 37 years and counting! </h4>
+    <div id = orderDetails>
+      <form id ="pizzaInfo">
+        <p>Ok, let's start your order!</p>
+        <h3>Pizza size</h3>
+        <select class="form-control" id="size">
+          <option value="12">small- 12" ($12)</option>
+          <option value="16">medium- 16" ($16)</option>
+          <option value="20">large- 18" ($20)</option>
+        </select>
+        <div class="form-group">
+          <h3>Toppings</h3>
+          <p>all toppings are an additional $2.50/each</p>
+          <input type="checkbox" name="toppings" value = "pepperoni"> pepperoni <br>
+          <input type="checkbox" name="toppings" value = "sausage"> sausage<br>
+          <input type="checkbox" name="toppings" value = "canadianBacon"> canadian bacon<br>
+          <input type="checkbox" name="toppings" value = "mushroom"> mushroom<br>
+          <input type="checkbox" name="toppings" value = "blackOlives"> black olives<br>
+          <input type="checkbox" name="toppings" value = "pineapple"> pineapple<br>
+          <input type="checkbox" name="toppings" value = "jalapeno"> jalapeno<br>
+        </div>
+        <button type="submit" class="btn">Add pizza to cart!</button>
+      </form> 
+    </div>
+  </div>
+</body>
+</html>

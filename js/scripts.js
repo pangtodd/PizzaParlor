@@ -2,6 +2,7 @@
 //business logic of for orders:
 function Order() {
   this.pizzas = {};
+  this.currentId= 0
 }
 
 Order.prototype.addPizza = function(pizza) {
@@ -13,6 +14,8 @@ Order.prototype.assignId = function() {
   this.currentId += 1;
   return this.currentId;
 };
+
+
 
 
 

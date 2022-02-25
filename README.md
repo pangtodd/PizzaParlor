@@ -45,10 +45,19 @@ A website that allows customers to order a custom pizza.
 - Code: testOrder.addPizza(testPizza);
 - Expected Output: testOrder; {pizzas: {testPizza}}
 ---
+
 #### Describe: order.assignId()
 - Test: "create a prototype for Order that adds a unique ID (incrementing by 1 each time the function is called) to each pizza object added to the Order object"
 - Code: testOrder.assignId(testPizza);
-- Expected Output: testOrder.
+- Expected Output: testPizza.Id = 1
+---
+
+#### Describe: pizza.pizzaPrice()
+- Test: "create a prototype for Order that calculates the cost of a pizza and inserts it into the pizza object."
+- Code: testOrder.assignId(testPizza);
+- Expected Output: testPizza.cost = 27 
+---
+
 
 ## Known Bugs
 

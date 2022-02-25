@@ -22,6 +22,14 @@ function Pizza(size, topping, price) {
   this.price = price;
 }
 
+Pizza.prototype.pricePizza = function(){
+  let basePrice = parseInt(this.size);
+  let toppingsPrice = this.topping.length * 2.50;
+  console.log ("topping price: "+toppingsPrice);
+  let price= basePrice+toppingsPrice;
+  
+}
+
 
 // User Interface Logic ---------
 let pizzaOrder = new Order();
@@ -38,6 +46,7 @@ $(document).ready(function() {
     });
     console.log(pizzaToppings);
     let newPizza = new Pizza(pizzaSize, pizzaToppings);
+    newPizza.pricePizza();
     pizzaOrder.addPizza(newPizza);
     console.log(pizzaOrder.pizzas);
   });

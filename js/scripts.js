@@ -87,7 +87,5 @@ $(document).ready(function() {
     $("#bridge").hide();
     $("#confirmation").show();
   });
-
-
 });
 

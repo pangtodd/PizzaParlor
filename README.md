@@ -2,7 +2,7 @@
 
 #### By Todd Pangilinan
 
-A website that allows customers to order a custom pizza.
+A website that allows customers to order custom pizzas.
 
 ## Technologies used:
 
@@ -47,7 +47,11 @@ A website that allows customers to order a custom pizza.
 ---
 
 #### Describe: Order.prototype.assignId()
-- Test: "create a prototype for Order that adds a unique ID (incrementing by 1 each time the function is called) to each pizza object added to the Order object"
+- Test: "create a prototype for Order that increments current.id by 1 each time the function is called"
+- Code: testOrder.assignId(testPizza);
+- Expected Output: testOrder.currentId = 1
+
+- Test: "Order.assignID that increments current.id by 1 each time the function is called"
 - Code: testOrder.assignId(testPizza);
 - Expected Output: testPizza.Id = 1
 ---
@@ -55,13 +59,13 @@ A website that allows customers to order a custom pizza.
 #### Describe: Pizza.prototype.pizzaPrice()
 - Test: "create a prototype for Pizza that calculates the cost of a pizza and inserts it into the pizza object."
 - Code: testOrder.assignId(testPizza);
-- Expected Output: testPizza.cost = 27 
+- Expected Output: testPizza.cost = 25
 ---
 
 #### Describe: Order.prototype.findPizza()
 - Test: "create a prototype for Order that searches for a pizza by its id number"
-- Code: pizzaOrder.findPizza(1);
-- Expected Output: Pizza {size: 'large', topping: Array(3), price: 29, id: 1}
+- Code: testOrder.findPizza(1);
+- Expected Output: Pizza {size: 'medium', topping: Array(3), price: 25, id: 1}
 ---
 
 #### Describe: displayPizzaDetails()
@@ -71,11 +75,9 @@ A website that allows customers to order a custom pizza.
 ---
 
 
-
-
 ## Known Bugs
 
-* Aside from that, as of 2/26/22, no other known bugs.
+* As of 2/26/22, no known bugs.
 * If you notice mistakes or bugs, please email pang.todd@gmail.com
 
 ## License

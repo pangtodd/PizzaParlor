@@ -9,30 +9,43 @@
 </head>
 <body>
   <div class = "container">
+    <img src="img//itsapizzaround.png" alt = "guy holding pizza">
     <h1>Mario's Hideout</h1>
-    <h4>voted best pizza from a plumbing pipe for 37 years and counting! </h4>
+    <h4>Not that Mario </h4>
     <div id = orderDetails>
       <form id ="pizzaInfo">
-        <p>Ok, let's start your order!</p>
+        <h4>Thank you for choosing Mario's Hideout for all of your pizza needs! We keep it simple here, we only serve pizzas and you just pay a base price for each pizza depending on the size, and then $3 per topping. <br><br>Ok, let's start your order!</h4>
         <h3>Pizza size</h3>
         <select class="form-control" id="size">
-          <option value="12">small- 12" ($12)</option>
-          <option value="16">medium- 16" ($16)</option>
-          <option value="20">large- 18" ($20)</option>
+          <option value="small">small- 12" ($12)</option>
+          <option value="medium">medium- 16" ($16)</option>
+          <option value="large">large- 18" ($20)</option>
         </select>
         <div class="form-group">
           <h3>Toppings</h3>
           <p>all toppings are an additional $2.50/each</p>
           <input type="checkbox" name="toppings" value = "pepperoni"> pepperoni <br>
           <input type="checkbox" name="toppings" value = "sausage"> sausage<br>
-          <input type="checkbox" name="toppings" value = "canadianBacon"> canadian bacon<br>
+          <input type="checkbox" name="toppings" value = "Canadian bacon"> canadian bacon<br>
           <input type="checkbox" name="toppings" value = "mushroom"> mushroom<br>
-          <input type="checkbox" name="toppings" value = "blackOlives"> black olives<br>
+          <input type="checkbox" name="toppings" value = "black olives"> black olives<br>
           <input type="checkbox" name="toppings" value = "pineapple"> pineapple<br>
           <input type="checkbox" name="toppings" value = "jalapeno"> jalapeno<br>
         </div>
         <button type="submit" class="btn">Add pizza to cart!</button>
       </form> 
+    </div>
+    <div id = "bridge">
+      <h3>Got it, we've started your pie! Do you want to finish your order or add another pizza?</h3>
+      <img src="img/pizza.png" alt="cartoon of pizza cook with pizza">
+      <button id="morePizza">Gimmie another pizza</button>
+      <button id="review">review/finalize order</button>
+    </div>
+    <div id="confirmation">
+      <h3>Okay, let's review your order.</h3>
+      <ul id="pizzaList">
+      </ul>
+      <h3></h3> 
     </div>
   </div>
 </body>

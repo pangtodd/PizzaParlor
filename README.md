@@ -53,10 +53,19 @@ A website that allows customers to order a custom pizza.
 ---
 
 #### Describe: pizza.pizzaPrice()
-- Test: "create a prototype for Order that calculates the cost of a pizza and inserts it into the pizza object."
+- Test: "create a prototype for Pizza that calculates the cost of a pizza and inserts it into the pizza object."
 - Code: testOrder.assignId(testPizza);
 - Expected Output: testPizza.cost = 27 
 ---
+
+#### Describe: Order.findPizza()
+- Test: "create a prototype for Order that searches for a pizza by its id number"
+- Code: pizzaOrder.findPizza(1);
+- Expected Output: Pizza {size: 'large', topping: Array(3), price: 29, id: 1}
+---
+
+
+Order.prototype.findPizza
 
 
 ## Known Bugs

@@ -15,21 +15,45 @@ Order.prototype.assignId = function() {
   return this.currentId;
 };
 
+Order.prototype.findPizza = function(id) {
+  if (this.pizzas[id] != undefined) {
+    return this.pizzas[id];
+  }
+  return false;
+};
+
 // business logic for pizzas:
 function Pizza(size, topping, price) {
   this.size = size;
   this.topping = topping;
   this.price = price;
-}
+};
 
 Pizza.prototype.pricePizza = function(){
-  let basePrice = parseInt(this.size);
-  let toppingsPrice = this.topping.length * 2.50;
-  console.log ("topping price: "+toppingsPrice);
-  let price= basePrice+toppingsPrice;
-  
-}
+  let pizzaSize= this.size;
+  let basePrice = 0;
+  if (pizzaSize ==="small"){
+    basePrice = 12
+  } else if (pizzaSize==="medium"){
+    basePrice=16
+  } else {
+    basePrice=20
+  }
+  let toppingsPrice = this.topping.length * 3;
+  let totalPrice= basePrice+toppingsPrice;
+  console.log ("total price: "+totalPrice)
+  this.price=totalPrice;
+};
 
+function displayPizzaDetails(orderToDisplay) {
+  let pizzasInOrder = $("ul#pizzaList");
+  let htmlForPizzalist = "";
+  Object.keys(orderToDisplay.pizzas).forEach(function(key) {
+    const pizza = orderToDisplay.findPizza(key);
+    htmlForPizzalist += "<li id=" + pizza.id + ">" + pizza.size + " pizza with " + pizza.topping.join(", ") + ". $"+ pizza.price +"</li>";
+  });
+  pizzasInOrder.html(htmlForPizzalist);
+}
 
 // User Interface Logic ---------
 let pizzaOrder = new Order();
@@ -37,18 +61,33 @@ let pizzaOrder = new Order();
 $(document).ready(function() {
   $("form#pizzaInfo").submit(function(event) {
     event.preventDefault();
+    $("#pizzaInfo").hide();
+    $("#bridge").show();
     let pizzaToppings = [];
     const pizzaSize = $("#size").val();
-    console.log(pizzaSize);
     $("input:checkbox[name=toppings]:checked").each(function(){
       const toppingsChoice = $(this).val();
       pizzaToppings.push(toppingsChoice);
     });
-    console.log(pizzaToppings);
     let newPizza = new Pizza(pizzaSize, pizzaToppings);
     newPizza.pricePizza();
     pizzaOrder.addPizza(newPizza);
-    console.log(pizzaOrder.pizzas);
+    displayPizzaDetails(pizzaOrder);
   });
+
+  $("button#morePizza").click(function() {
+    document.getElementById("pizzaInfo").reset();
+    $("#pizzaInfo").show();
+    $("#bridge").hide();
+  });
+
+  $("button#review").click(function() {
+    document.getElementById("pizzaInfo").reset();
+    $("#pizzaInfo").hide();
+    $("#bridge").hide();
+    $("#confirmation").show();
+  });
+
+
 });
 

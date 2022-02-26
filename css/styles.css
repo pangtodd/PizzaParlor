@@ -1,0 +1,22 @@
+.container{
+  margin-top: 5%;
+}
+
+img {
+  float: left;
+  max-height: 200px;
+  max-width: auto;
+}
+
+body {
+  background-color: #f1dfaf;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.btn, #morePizza, #review {
+  background-color: #51a17e
+}
+
+#bridge, #confirmation {
+  display: none;
+}

@@ -2,7 +2,7 @@
 //business logic of for orders:
 function Order() {
   this.pizzas = {};
-  this.currentId= 0
+  this.currentId= 0;
 }
 
 Order.prototype.addPizza = function(pizza) {
@@ -30,11 +30,10 @@ function Pizza(size, topping, price) {
 };
 
 Pizza.prototype.pricePizza = function(){
-  let pizzaSize= this.size;
   let basePrice = 0;
-  if (pizzaSize ==="small"){
+  if (this.size ==="small"){
     basePrice = 12
-  } else if (pizzaSize==="medium"){
+  } else if (this.size==="medium"){
     basePrice=16
   } else {
     basePrice=20
@@ -50,10 +49,10 @@ function displayPizzaDetails(orderToDisplay) {
   let htmlForPizzalist = "";
   Object.keys(orderToDisplay.pizzas).forEach(function(key) {
     const pizza = orderToDisplay.findPizza(key);
-    htmlForPizzalist += "<li id=" + pizza.id + ">" + pizza.size + " pizza with " + pizza.topping.join(", ") + ". $"+ pizza.price +"</li>";
+    htmlForPizzalist += "<li id=" + pizza.id + ">" + pizza.size + " pizza with cheese, " + pizza.topping.join(", ") + " $"+ pizza.price +"</li>";
   });
   pizzasInOrder.html(htmlForPizzalist);
-}
+};
 
 // User Interface Logic ---------
 let pizzaOrder = new Order();

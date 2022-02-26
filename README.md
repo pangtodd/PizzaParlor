@@ -75,7 +75,7 @@ A website that allows customers to order a custom pizza.
 
 ## Known Bugs
 
-* As of 2/16/22, no known bugs.
+* Aside from that, as of 2/26/22, no other known bugs.
 * If you notice mistakes or bugs, please email pang.todd@gmail.com
 
 ## License

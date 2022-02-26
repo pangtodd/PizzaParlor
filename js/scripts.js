@@ -79,6 +79,7 @@ $(document).ready(function() {
     document.getElementById("pizzaInfo").reset();
     $("#pizzaInfo").show();
     $("#bridge").hide();
+    $("#confirmation").hide();
   });
 
   $("button#review").click(function() {

@@ -40,32 +40,37 @@ A website that allows customers to order a custom pizza.
 - Expected Output: testOrder; {}
 ---
 
-#### Describe: order.addPizza()
+#### Describe: Order.prototype.addPizza()
 - Test: "create a prototype for Order that adds pizzas to an order object"
 - Code: testOrder.addPizza(testPizza);
 - Expected Output: testOrder; {pizzas: {testPizza}}
 ---
 
-#### Describe: order.assignId()
+#### Describe: Order.prototype.assignId()
 - Test: "create a prototype for Order that adds a unique ID (incrementing by 1 each time the function is called) to each pizza object added to the Order object"
 - Code: testOrder.assignId(testPizza);
 - Expected Output: testPizza.Id = 1
 ---
 
-#### Describe: pizza.pizzaPrice()
+#### Describe: Pizza.prototype.pizzaPrice()
 - Test: "create a prototype for Pizza that calculates the cost of a pizza and inserts it into the pizza object."
 - Code: testOrder.assignId(testPizza);
 - Expected Output: testPizza.cost = 27 
 ---
 
-#### Describe: Order.findPizza()
+#### Describe: Order.prototype.findPizza()
 - Test: "create a prototype for Order that searches for a pizza by its id number"
 - Code: pizzaOrder.findPizza(1);
 - Expected Output: Pizza {size: 'large', topping: Array(3), price: 29, id: 1}
 ---
 
+#### Describe: displayPizzaDetails()
+- Test: "create a function that loops through an object and converts attributes to a string/html."
+- Code: displayPizzaDetails(pizzaOrder);
+- Expected Output: <li id="1">medium pizza with pepperoni, Canadian bacon, jalapeno. $25</li> (in index.html).
+---
 
-Order.prototype.findPizza
+
 
 
 ## Known Bugs

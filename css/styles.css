@@ -2,6 +2,11 @@
   margin-top: 5%;
 }
 
+h1{
+  font-weight:bold;
+  font-size: 100px;
+  font-family:cursive;
+}
 img {
   float: left;
   max-height: 200px;

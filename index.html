@@ -10,11 +10,15 @@
 <body>
   <div class = "container">
     <img src="img//itsapizzaround.png" alt = "guy holding pizza">
+    <br>
+    <br>
     <h1>Mario's Hideout</h1>
     <h4>Not that Mario </h4>
     <div id = orderDetails>
       <form id ="pizzaInfo">
-        <h4>Thank you for choosing Mario's Hideout for all of your pizza needs! We keep it simple here, we only serve pizzas and you just pay a base price for each pizza depending on the size, and then $3 per topping. <br><br>Ok, let's start your order!</h4>
+        <br>
+        <br>
+        <h4>Thank you for choosing Mario's Hideout for all of your pizza needs! We keep it simple here, we only serve pizzas and you just pay a base price for each pizza (depending on the size), and then $3 per topping. <br><br>Ok, let's get your pies in the oven!</h4>
         <h3>Pizza size</h3>
         <select class="form-control" id="size">
           <option value="small">small- 12" ($12)</option>
@@ -23,7 +27,7 @@
         </select>
         <div class="form-group">
           <h3>Toppings</h3>
-          <p>all toppings are an additional $2.50/each</p>
+          <p>all toppings are an additional $3/each</p>
           <input type="checkbox" name="toppings" value = "pepperoni"> pepperoni <br>
           <input type="checkbox" name="toppings" value = "sausage"> sausage<br>
           <input type="checkbox" name="toppings" value = "Canadian bacon"> canadian bacon<br>
@@ -36,16 +40,22 @@
       </form> 
     </div>
     <div id = "bridge">
+      <br><br>
       <h3>Got it, we've started your pie! Do you want to finish your order or add another pizza?</h3>
       <img src="img/pizza.png" alt="cartoon of pizza cook with pizza">
       <button id="morePizza">Gimmie another pizza</button>
       <button id="review">review/finalize order</button>
     </div>
     <div id="confirmation">
+      <br><br>
       <h3>Okay, let's review your order.</h3>
       <ul id="pizzaList">
       </ul>
-      <h3></h3> 
+      <h3>Are you sure that's all you need? It's not too late to add another pizza!</h3>
+      <br><br>
+      <button id="morePizza">Gimmie another pizza</button>
+      <br><br><br><br>
+      <h3>Otherwise, your pizza will be ready in 30-45 minutes. We only take cash. See you soon!</h3> 
     </div>
   </div>
 </body>

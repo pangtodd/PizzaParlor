@@ -40,7 +40,6 @@ Pizza.prototype.pricePizza = function(){
   }
   let toppingsPrice = this.topping.length * 3;
   let totalPrice= basePrice+toppingsPrice;
-  console.log ("total price: "+totalPrice)
   this.price=totalPrice;
 };
 

@@ -54,9 +54,10 @@ function displayPizzaDetails(orderToDisplay) {
 };
 
 // User Interface Logic ---------
-let pizzaOrder = new Order();
+
 
 $(document).ready(function() {
+  let pizzaOrder = new Order();
   $("form#pizzaInfo").submit(function(event) {
     event.preventDefault();
     $("#pizzaInfo").hide();
